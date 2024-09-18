@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 16px;
+    gap: 20px;
+    align-items: center;
+}
+
+body{
+    margin: 0 16px;
+}
+
+p {
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+main > div {
+    width: 100%;
+}
+
+input:disabled {
+    cursor: not-allowed;
+}
+
+.disable {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.bill-input {
+    color: #6f3cff;
+    font-size: 25px;
+}
+
+.input-container {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+
+}
+
+.input-container input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 8px 4px;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+.bill-output {
+    background-color: #34568b;
+    color: white;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.tip-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    color: white ;
+}
+
+
+.tip {
+    background-color: #9c60ff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.custom-tip {
+    margin-top: 12px;
+}
+
+.gray-input {
+    border: none;
+    outline: none;
+    background-color: #ddd;
+    font-size: 16px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.generate-bill-btn {
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: 18px;
+    border-radius: 7px;
+    background-color: #9c60ff;
+    color: white;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+.generate-bill-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.bill-output p span {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.bill-output p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reset-btn {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 19px;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* .reset-btn:disabled {
+    cursor: not-allowed;
+} */
+
+
+.tip.selected {
+    outline: 4px solid rgba(255, 162, 0, 0.888);
+}
+
+/* media queries */
+
+@media(max-width : 610px) {
+    main {
+        flex-direction: column;
+    }
+}
